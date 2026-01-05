@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ccff00;
+  --color-bg-dark: #050505;
+  --color-bg-card: #121212;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Custom Component Classes */
+.btn-primary {
+  @apply bg-primary text-black font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-all hover:-translate-y-1;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.btn-outline {
+  @apply bg-transparent border-2 border-white text-white font-bold uppercase tracking-wider px-8 py-4 rounded-md transition-all hover:bg-white hover:text-black;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-extrabold uppercase mb-4 tracking-tight;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:border-primary hover:-translate-y-2;
+}
+
+/* Helper Utilities */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
